@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'capybara'
+require 'capybara-page-object'
 require 'capybara/dsl'
 require 'rspec'
 

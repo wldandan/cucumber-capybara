@@ -1,4 +1,5 @@
 When /^I search Google for "(.*)"$/ do |query|
+  puts "directly access page by Capybara"
   visit 'http://www.google.com/advanced_search?hl=en'
   fill_in 'as_q', :with => query
   click_button 'Search'

@@ -2,7 +2,9 @@ source :rubygems
 #source "http://dist.dev.int.realestate.com.au/rubygems/"
 
 gem 'cucumber'
+gem 'capybara-page-object', '~> 0.6.0'
 gem 'rspec'
+gem 'gizmo', '0.1.0'
 #gem 'httparty', '0.6.1'
 #gem 'activerecord', '3.0.3'
 #gem 'mysql', '2.8.1'
