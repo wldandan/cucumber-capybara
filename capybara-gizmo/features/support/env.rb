@@ -1,19 +1,17 @@
 require 'rubygems'
-require 'capybara'
-require 'capybara-page-object'
-require 'capybara/dsl'
-require 'rspec'
+require 'selenium-webdriver'
+require 'capybara/cucumber'
+require 'gizmo'
+World(Gizmo::Helpers)
 
-Capybara.run_server = false
-Capybara.default_driver = :selenium
-Capybara.default_selector = :css
+LIB_PATH = File.dirname(__FILE__) + '/../../lib'
+require LIB_PATH + '/patch/string'
 
-module Helpers
-  def without_resynchronize
-    page.driver.options[:resynchronize] = false
-    yield
-    page.driver.options[:resynchronize] = true
+Capybara.default_driver= :selenium
+
+module Capybara
+  module DSL
+    alias :response :page
   end
 end
 
-World(Capybara::DSL, Helpers)
