@@ -69,11 +69,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara (~> 1.1.2)
-  capybara-page-object
-  cucumber
+  capybara (~> 1.1.4)
+  capybara-page-object (~> 0.6.0)
+  cucumber (~> 1.2.3)
   debugger
   gizmo
   rspec
-  selenium-webdriver
-  term-ansicolor
+  selenium-webdriver (~> 2.31.0)
+  term-ansicolor (~> 1.0.7)
