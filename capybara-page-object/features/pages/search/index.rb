@@ -7,7 +7,7 @@ module Pages
       end
 
       component(:search_form) do
-        Components::SearchForm.new find('.advsearch')
+        Components::SearchForm.new find('._No')
       end
 
       def search(*args)
